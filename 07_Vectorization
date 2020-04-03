@@ -1,0 +1,20 @@
+Vectorization
+
+Vectorization is the process of taking code that relies on loops and converting it into matrix operations. It is more efficient, more elegant, and more concise.
+As an example, let's compute our prediction from a hypothesis. Theta is the vector of fields for the hypothesis and x is a vector of variables.
+
+With loops:
+
+
+		prediction = 0.0;
+		for j = 1:n+1,
+		  prediction += theta(j) * x(j);
+		end;
+
+
+With vectorization:
+
+prediction = theta' * x;
+
+
+If you recall the definition multiplying vectors, you'll see that this one operation does the element-wise multiplication and overall sum in a very concise notation.

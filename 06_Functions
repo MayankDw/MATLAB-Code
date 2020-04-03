@@ -1,0 +1,48 @@
+Functions
+
+To create a function, type the function code in a text editor (e.g. gedit or notepad), and save the file as "functionName.m"
+
+Example function:
+
+
+
+        function y = squareThisNumber(x)
+        y = x^2;
+
+
+To call the function in Octave, do either:
+
+1) Navigate to the directory of the functionName.m file and call the function:
+
+
+
+    % Navigate to directory:
+    cd /path/to/function
+    % Call the function:
+    functionName(args)
+
+
+2) Add the directory of the function to the load path and save it:You should not use addpath/savepath for any of the assignments in this course. Instead use 'cd' to change the current working directory. Watch the video on submitting assignments in week 2 for instructions.
+
+
+
+    % To add the path for the current session of Octave:
+    addpath('/path/to/function/')
+    % To remember the path for future sessions of Octave, after executing 
+      addpath above, also do:
+    savepath
+
+
+Octave's functions can return more than one value:
+
+    function [y1, y2] = squareandCubeThisNo(x)
+    y1 = x^2
+    y2 = x^3
+
+
+Call the above function this way:
+
+    [a,b] = squareandCubeThisNo(x)
+
+
+
